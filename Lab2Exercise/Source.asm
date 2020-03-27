@@ -55,6 +55,11 @@ main PROC
 	call Crlf						; Go to next line
 
 	; *** ASKISI 2 ***
+	mov eax,[array1+13*4]			; mov designated array element to ECX using DIRECT ADDRESSING
+	mov edx, OFFSET mAccessElement  ; Load EDX with the mAccessElement string OFFSET
+	call WriteString				; Show the message on screen
+	call WriteInt					; Show the element value on screen
+	call Crlf						; Go to next line
 
 
 	exit
